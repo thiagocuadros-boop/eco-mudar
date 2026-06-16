@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoImpacto | Emergência Climática</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container" style="cursor:pointer;" onclick="irParaHome()">
+            <div class="logo">Eco.Mudar</div>
+            <div class="credito-autor">Feito por Thiago Older</div>
+        </div>
+        <button class="btn-modo" onclick="alternarModo()">Alternar Visual</button>
+    </header>
+
+    <div id="telaHome" class="view ativa">
+        <main class="grid-conteudo">
+            
+            <div class="card critico">
+                <div>
+                    <span class="tag" style="background-color: var(--alerta-vermelho); color: white;">🚨 Risco Crítico</span>
+                    <h3>Acidificação dos Oceanos</h3>
+                    <p>O excesso de gás carbônico na atmosfera está mudando a química dos mares e devastando espécies inteiras.</p>
+                </div>
+                <button class="btn-acao" onclick="verDetalhes('acidificacao')">Entrar no Problema →</button>
+            </div>
+
+            <div class="card critico">
+                <div>
+                    <span class="tag" style="background-color: var(--alerta-vermelho); color: white;">🚨 Ameaça Oculta</span>
+                    <h3>Derretimento do Permafrost</h3>
+                    <p>O solo congelado do Ártico está estragando e liberando gases estufa perigosos que estavam presos há milênios.</p>
+                </div>
+                <button class="btn-acao" onclick="verDetalhes('permafrost')">Entrar no Problema →</button>
+            </div>
+
+            <div class="card atencao">
+                <div>
+                    <span class="tag" style="background-color: var(--alerta-amarelo); color: black;">⚠️ Desequilíbrio</span>
+                    <h3>Sincronia Migratória Quebrada</h3>
+                    <p>O calor precoce confunde os ciclos de reprodução de plantas e insetos, deixando aves famintas.</p>
+                </div>
+                <button class="btn-acao" onclick="verDetalhes('migracao')">Entrar no Problema →</button>
+            </div>
+
+            <div class="card solucao">
+                <div>
+                    <span class="tag" style="background-color: var(--neon-azul); color: black;">🌱 Resposta</span>
+                    <h3>Corredores Ecológicos</h3>
+                    <p>Criação de caminhos verdes para ligar florestas isoladas e permitir a fuga de animais do calor.</p>
+                </div>
+                <button class="btn-acao" onclick="verDetalhes('corredores')">Ver Solução →</button>
+            </div>
+
+        </main>
+    </div>
+
+    <div id="telaDetalhes" class="view">
+        <main class="container-detalhes">
+            <button class="btn-voltar" onclick="irParaHome()">← Voltar para a Home</button>
+            
+            <h2 id="detalheTitulo" class="detalhe-titulo">Título Dinâmico</h2>
+            
+            <img id="detalheImagem" class="detalhe-imagem" src="" alt="Imagem do problema ambiental">
+            
+            <div id="detalheTexto" class="detalhe-texto">Texto explicativo dinâmico...</div>
+            
+            <div id="caixaSolucao" class="caixa-solucao-vinculada">
+                <h4>Foco de Ação Coletiva</h4>
+                <p id="detalheSolucaoTxt">Informação sobre ações práticas imediatas.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        EcoMudar — Informação instantânea para o planeta.<br>
+        <span style="color: var(--alerta-vermelho)">Feito por Thiago Older © 2026</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
